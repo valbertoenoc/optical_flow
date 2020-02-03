@@ -37,9 +37,9 @@ The will yield the following output in video form. Press ESC key to close.
 python app_optical_flow --input videos\cars.mp4 --mode dense
 ```
 
-<a href="https://github.com/valbertoenoc/optical_flow/blob/master/images/dense_flowgrid.png"><img src="https://github.com/valbertoenoc/optical_flow/blob/master/images/dense_flowgrid.png" align="left" width="480"></a>
+<a href="https://github.com/valbertoenoc/optical_flow/blob/master/images/dense_flowgrid.png"><img src="https://github.com/valbertoenoc/optical_flow/blob/master/images/dense_flowgrid.png" align="left" width="320"></a>
 
   
 
-<a href="https://github.com/valbertoenoc/optical_flow/blob/master/images/dense_colorcoded.png"><img src="https://github.com/valbertoenoc/optical_flow/blob/master/images/dense_colorcoded.png" align="left" width="480"></a>
+<a href="https://github.com/valbertoenoc/optical_flow/blob/master/images/dense_colorcoded.png"><img src="https://github.com/valbertoenoc/optical_flow/blob/master/images/dense_colorcoded.png" align="left" width="320"></a>
 

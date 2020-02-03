@@ -6,7 +6,7 @@ from optical_flow.optical_flow import OpticalFlow
 of = OpticalFlow()
 
 def main(): 
-    cap = cv2.VideoCapture('cars.mp4')
+    cap = cv2.VideoCapture('videos\\cars.mp4')
     if not cap.isOpened():
         print('[ERROR] Invalid video.')
         return

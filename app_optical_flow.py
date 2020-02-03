@@ -8,8 +8,8 @@ of = OpticalFlow()
 
 def main(): 
     ap = argparse.ArgumentParser()
-    ap.add_argument('-i', '--input', default='cars.mp4', help='Input video filename')
-    ap.add_argument('-m', '--mode', default='sparse', help='optical flow computation mode: sparse (Lucas Kanede), dense (Farneback)')
+    ap.add_argument('-i', '--input', default='videos\\cars.mp4', help='Input video filename')
+    ap.add_argument('-m', '--mode', default='dense', help='optical flow computation mode: sparse (Lucas Kanede), dense (Farneback)')
     args = vars(ap.parse_args())
 
     cap = cv2.VideoCapture(args['input'])
@@ -45,14 +45,16 @@ def main():
 
             # draw found points to ilustrate their direction
             of.display_sparse_flow(frame, new_points, old_points)
-
-        if args['mode'] == 'dense':
+        elif args['mode'] == 'dense':
             # calculate sparse optical flow - Farneback method (dense)
             flow = cv2.calcOpticalFlowFarneback(old_gray, frame_gray, None, 0.5, 3, 15, 3, 5, 1.2, 0)
             # display flow grid with flow direction
             of.display_flow_grid(frame_gray, flow)
             # display flow color coded by direction
             of.display_color_coded_directions(hsv, flow)
+        else:
+            print('[ERROR] Invalid mode.')
+            break
 
         frame_count += 1
         if frame_count % 15 == 0:
